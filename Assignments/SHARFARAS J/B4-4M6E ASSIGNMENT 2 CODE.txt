@@ -1,1 +1,10 @@
-
+import random
+import time
+while(1):
+    temperature = random.randint(0,125)
+    humidity = random.randint(0,100)
+    if temperature>50:
+        print("Temperature noted by thermistor:",str(temperature)+'°C')        
+        print("Humidity noted by the Sensor:",str(humidity)+'%')
+        print("\n")
+        time.sleep(4)

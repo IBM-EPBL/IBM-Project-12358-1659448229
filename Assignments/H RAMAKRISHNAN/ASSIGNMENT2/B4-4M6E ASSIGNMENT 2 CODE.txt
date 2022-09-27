@@ -3,7 +3,7 @@ import random
 while(1):
     temperature = random.randint(0,100)
     humidity = random.randint(0,100)
-    if temperature>75:
+    if temperature>70:
         print("WARNING!! HIGH TEMPERATURE DETECTED")
         print("TEMPERATURE RECORDED:",str(temperature)+'°C',"HUMIDITY DETECTED:",humidity)
         print("\n")

@@ -1,7 +1,7 @@
-MY FILES
 B4-4M6E ASSIGNMENT-1 LINK:
 
 https://www.tinkercad.com/things/jTjNn9gkv2R?sharecode=wkLl1wgu9AcwyN0jFzjFIg63MaF87derz2Q4y9wO1zE
+
 
 B4-4M6E ASSIGNMENT-2 CODE:
 
@@ -15,3 +15,28 @@ while(1):
         print("TEMPERATURE RECORDED:",str(temperature)+'°C',"HUMIDITY DETECTED:",humidity)
         print("\n")
         time.sleep(2)
+        
+        
+ B4-4M6E ASSIGNMENT-3 CODE:
+ 
+import RPi.GPIO as PIN
+from time import sleep
+red=7
+yellow=11
+green=13
+PIN.setup(red,PIN.OUT)
+PIN.setup(yellow,PIN.OUT)
+PIN.setup(green,PIN.OUT)
+while True:
+    PIN.output(red,True)
+    sleep(4)
+    PIN.output(red,False)
+
+    PIN.output(yellow, True)
+    sleep(1)
+    PIN.output(yellow, False)
+
+    PIN.output(green, True)
+    sleep(3)
+    PIN.output(green, False)
+PIN.cleanup()

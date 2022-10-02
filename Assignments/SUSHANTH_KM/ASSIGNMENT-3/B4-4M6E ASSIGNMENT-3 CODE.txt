@@ -1,3 +1,5 @@
+I have coded a Python Script to Visualize a traffic light controller system.
+
 import RPi.GPIO as PIN
 from time import sleep
 red=7

@@ -1,0 +1,23 @@
+B4-4M6E ASSIGNMENT 3
+
+PYTHON CODE FOR TRAFFIC LIGHT PROGRAM IN RASPBERRY PI
+
+import RPi.GPIO as PIN
+from time import sleep
+RED=8
+YELLOW=12
+GREEN=14
+PIN.setup(RED,PIN.OUT)
+PIN.setup(YELLOW,PIN.OUT)
+PIN.setup(GREEN,PIN.OUT)
+while True:
+    PIN.output(RED,True)
+    sleep(2)
+    PIN.output(RED,False)
+    PIN.output(YELLOW, True)
+    sleep(3)
+    PIN.output(YELLOW, False)
+    PIN.output(GREEN, True)
+    sleep(5)
+    PIN.output(GREEN, False)
+PIN.cleanup()

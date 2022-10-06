@@ -1,0 +1,21 @@
+import RPi.GPIO as PINS
+from time import sleep
+red=7
+yellow=11
+green=13
+PINS.setup(red,PINS.OUT)
+PINS.setup(yellow,PINS.OUT)
+PINS.setup(green,PINS.OUT)
+while True:
+    PINS.output(red,True)
+    sleep(4)
+    PINS.output(red,False)
+
+    PINS.output(yellow, True)
+    sleep(1)
+    PINS.output(yellow, False)
+
+    PINS.output(green, True)
+    sleep(3)
+    PINS.output(green, False)
+PINS.cleanup()

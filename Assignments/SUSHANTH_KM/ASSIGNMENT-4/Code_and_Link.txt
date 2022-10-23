@@ -29,7 +29,7 @@ void loop()
   delay(1000);
   if (distance<=100)
   {
-    Serial.println("ALERT!!");
+    Serial.println("ALERT, THE DISTANCE IS LESS THAN 100CM");
   }
                
 }

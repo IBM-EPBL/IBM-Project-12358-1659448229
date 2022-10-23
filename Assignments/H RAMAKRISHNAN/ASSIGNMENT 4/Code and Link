@@ -1,0 +1,33 @@
+LINK :
+
+https://wokwi.com/projects/346321483069391444
+
+CODE :
+
+long int echoPin=7;
+long int trigPin=5;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(7,OUTPUT);
+  pinMode(5,INPUT);
+}
+
+void loop()
+{
+  int duration, distance;
+  digitalWrite(3,LOW);
+  delayMicroseconds(2);
+  digitalWrite(3,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(3,LOW);
+  
+  duration=pulseIn(7,HIGH);
+  distance=(duration*0.034/2);
+  delay(1000);
+  if (distance<=100)
+  {
+    Serial.println("ALERT!!");
+  }
+               
+}

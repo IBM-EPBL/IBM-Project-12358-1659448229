@@ -1,0 +1,39 @@
+WOKWI SKETCH LINK:
+https://wokwi.com/projects/346148463383151186
+
+CODE
+Docs
+sketch.ino
+diagram.json
+Library Manager
+
+
+long int echoPin=2;
+long int trigPin=3;
+long duration;
+int distance;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(3,OUTPUT);
+  pinMode(2,INPUT);
+}
+
+void loop()
+{
+  digitalWrite(3,LOW);
+  delayMicroseconds(2);
+  digitalWrite(3,HIGH);
+  delayMicroseconds(10);
+  digitalWrite(3,LOW);
+  
+ duration=pulseIn(2,HIGH);
+  distance=(duration*0.034/2);
+  delay(1000);
+  if (distance<=100)
+  {
+    Serial.println("ALERT!!");
+  }
+               
+}
+Simulation

@@ -3,7 +3,9 @@ import ibmiotf.device
 import time
 import random
 import sys
-
+from twilio.rest import Client
+import keys
+Client = Client(keys.account_sid, keys.auth_token)
 
 organization = "lwkiec"
 deviceType = "Microcontroller_Device_1"
@@ -40,8 +42,15 @@ while True:
     temperature = random.randint(0, 100)
 
     data = {'pH': pH, 'turbid': turbidity, 'temp': temperature}
+    def SMS():
+        message = Client.messages.create(
+            body="ALERT!! THE WATER QUALITY IS DEGRADED",
+            from_=keys.twilio_number,
+             to = keys.target_number)
+        print(message.body)
 
-
+    if temperature>70 or pH<6 or turbidity>500:
+        SMS()
 
     def myOnPublishCallback():
         print("Published pH= %s" % pH, "Turbidity:%s" % turbidity, "Temperature:%s" % temperature)
@@ -50,7 +59,7 @@ while True:
     success = deviceCli.publishEvent("demo", "json", data, qos=0, on_publish=myOnPublishCallback)
     if not success:
         print("Not Connected to ibmiot")
-    time.sleep(1)
+    time.sleep(5)
     deviceCli.commandCallback = myCommandCallback
 
 deviceCli.disconnect()

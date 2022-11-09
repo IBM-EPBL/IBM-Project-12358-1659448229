@@ -1,1 +1,2 @@
-Dummy Text.
+In this sprint , i have uploaded the screenshots of the Web UI and the results obtained on the output console of the software, when the 
+lighton and lightoff buttons are pressed.

@@ -1,2 +1,3 @@
 In this sprint, i have uploaded the entire python code of the project.
 It also contains screenshot of the values thats generated in the pycharm output console directly getting published to the IBM IOT Watson Platform.
+The sprint3 also contains the design of circuit diagram for the entire project.

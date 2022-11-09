@@ -1,3 +1,8 @@
 in this sprint, i have demonstated the working of the MIT APP.
 The MIT APP displays the oceanic parameters like temperature, pH and turbidity, and hence with the help of this
 we can determine the river water quality.
+
+
+VIDEO LINK:
+
+https://drive.google.com/file/d/1-5HqPleUMhumXXlS4Ko3gDGP8JYjNLAT/view?usp=share_link

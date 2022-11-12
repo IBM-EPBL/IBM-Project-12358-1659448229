@@ -63,3 +63,8 @@ while True:
     deviceCli.commandCallback = myCommandCallback
 
 deviceCli.disconnect()
+#Twilio Account Credentials
+account_sid ='ACa0eb9bf43aa629b503bdd01d0962d465'
+auth_token ='48c1a0ade0472038ab36d45e0d9fb6e7'
+twilio_number ='+19804095xxx'
+target_number ='+919940555xxx'
